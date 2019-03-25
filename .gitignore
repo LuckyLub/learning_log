@@ -3,3 +3,4 @@ secrets.py
 venv/
 git
 __pycache__
+db.*
