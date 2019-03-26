@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1 class="display-6">Topic-Entries Overview</h1>
+    <p class="lead">Here you can find the different entries per topic.</p>
+
+    <table class="table table-bordered table-responsive-lg">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Topic</th>
+                <th scope="col">Entry</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for key, value in input.items %}
+            <tr>
+                <td><a href="http://127.0.0.1:8000/logs/topic/{{key}}">{{key}}</a></td>
+                <td>{% for item in value %}
+                   {{item}}<br>
+                    {% endfor %}
+                </td>
+            <tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+{% endblock %}
