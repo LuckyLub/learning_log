@@ -17,9 +17,10 @@
         {% for key, value in input.items %}
             <tr>
                 <td><a href="http://127.0.0.1:8000/logs/topic/{{key}}">{{key}}</a></td>
-                <td>{% for item in value %}
-                   {{item}}<br>
+                <td><ol>{% for item in value %}
+                   <li>{{item}}</li>
                     {% endfor %}
+                    </ol>
                 </td>
             <tr>
         {% endfor %}

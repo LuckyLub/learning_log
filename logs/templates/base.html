@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>This is my logs page</title>
+
+
 </head>
 <body>
-    <h1 class="display-4 text-center"><u>My Learning Log</u></h1>
+
+    <div class="bg-dark sticky-top">
+        <h1 class="display-4 text-light text-center"><u>My Learning Log</u></h1>
+        <div class="navbar navbar-dark navbar-expand-lg">
+          <a class="navbar-brand" href="{% url 'logs:index' %}">Home</a>
+          <a class="navbar-brand" href="{% url 'logs:new_topic' %}">Add new topic</a>
+        </div>
+    </div>
 
     {% block content %}
 

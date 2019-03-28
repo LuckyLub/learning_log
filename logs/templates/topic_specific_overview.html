@@ -2,6 +2,12 @@
 
 {% block content %}
     <h1 class="display-6">Topic: {{topic}}</h1>
+    <form action="{{ URL.path }}" method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name='submit'>add entry</button>
+    </form>
+
     <ol>
     {% for entry in entries %}
     <li>{{entry}}</li>
