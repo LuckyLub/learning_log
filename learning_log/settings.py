@@ -90,17 +90,17 @@ WSGI_APPLICATION = 'learning_log.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'learning_log',
-        'USER': 'postgres',
-        'PASSWORD': os.environ['SECRET_KEY_POSTGRES'],
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'learning_log',
+#         'USER': 'postgres',
+#         'PASSWORD': os.environ['SECRET_KEY_POSTGRES'],
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
